@@ -1,0 +1,901 @@
+/* ============================================
+   80周年記念サイト用CSS
+   ============================================ */
+
+/* Material Icons カスタムスタイル */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  display: inline-flex;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+/* ============================================
+   カラーパレット（CSS変数）
+   ============================================ */
+:root {
+  --primary-green: #2E7D32;
+  --light-green: #66BB6A;
+  --accent-green: #1B5E20;
+  --bg-light: #F1F8F4;
+  --text-dark: #212121;
+  --white: #FFFFFF;
+}
+
+/* ============================================
+   基本スタイル
+   ============================================ */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", 
+               "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+/* ============================================
+   背景色・テキスト色
+   ============================================ */
+.bg-primary-green {
+  background-color: var(--primary-green) !important;
+}
+
+.bg-light-green {
+  background-color: var(--light-green) !important;
+}
+
+.bg-accent-green {
+  background-color: var(--accent-green) !important;
+}
+
+.text-primary-green {
+  color: var(--primary-green) !important;
+}
+
+/* ============================================
+   ボタン
+   ============================================ */
+.btn-donate {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-donate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  color: var(--white);
+}
+
+/* ============================================
+   カード
+   ============================================ */
+.card-donation {
+  border: 2px solid var(--light-green);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card-donation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.2);
+}
+
+.card-donation .card-header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 13px 13px 0 0 !important;
+}
+
+.donation-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.icon-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.icon-card .material-icons {
+  font-size: 3rem;
+  color: var(--primary-green);
+}
+
+/* ============================================
+   セクションタイトル
+   ============================================ */
+.section-title {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+  border-radius: 2px;
+}
+
+/* ============================================
+   ナビゲーション
+   ============================================ */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-green) !important;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+}
+
+.nav-link .material-icons {
+  font-size: 1.2rem;
+}
+
+/* ============================================
+   ヒーローセクション
+   ============================================ */
+.jumbotron-fluid {
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron-fluid::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, var(--white), transparent);
+}
+
+.hero-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-green);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* ============================================
+   テーブル
+   ============================================ */
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+/* ============================================
+   フローティング要素
+   ============================================ */
+.floating-donate {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-donate .btn {
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.floating-nav {
+  position: fixed;
+  width: 50px;
+  right: 0;
+  top: 10%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.floating-nav a {
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-decoration: none;
+}
+
+.totop {
+  position: absolute;
+  top: -60px;
+  right: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.totop:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================================
+   記事ページ用スタイル
+   ============================================ */
+.article-header {
+  border-left: 5px solid var(--primary-green);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.article-content {
+  line-height: 1.8;
+}
+
+.article-content h3 {
+  color: var(--primary-green);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-green);
+}
+
+.article-content h4 {
+  color: var(--primary-green);
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-list {
+  padding-left: 1.5rem;
+}
+
+.content-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 1rem 0;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #666;
+}
+
+.news-item {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.news-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15) !important;
+  border-color: var(--light-green);
+}
+
+.news-meta {
+  min-width: 180px;
+}
+
+/* ============================================
+   80年の歩み
+   ============================================ */
+#history {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  background-color: #fafafa;
+}
+
+.history-image-divider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.history-image-divider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: sepia(60%) contrast(1.1) brightness(1.05);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.history-image-divider:hover img {
+  opacity: 0.7;
+  filter: sepia(40%) contrast(1.2) brightness(1.1);
+  transform: scale(1.01);
+}
+
+.history-image-divider::before,
+.history-image-divider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.history-image-divider::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(250, 250, 250, 0.7) 20%,
+    transparent 100%
+  );
+}
+
+.history-image-divider::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(250, 250, 250, 0.7) 20%,
+    transparent 100%
+  );
+}
+
+.history-image-divider.mb-3 {
+  margin-bottom: 0.5rem !important;
+}
+
+.history-image-divider.mt-3 {
+  margin-top: 0.5rem !important;
+}
+
+#history .table {
+  margin-bottom: 0;
+}
+
+#history .table td,
+#history .table th {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+#history .table ul {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+#history .table ul li {
+  margin-bottom: 0.25rem;
+}
+
+#history .section-title {
+  margin-bottom: 1.5rem !important;
+  padding: 1rem 0;
+}
+
+/* 時代別グラデーションカラー */
+.history-era-genesis {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%) !important;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.history-era-genesis::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1));
+}
+
+.history-era-amemiya {
+  background: linear-gradient(135deg, #2E7D32 0%, #388E3C 100%) !important;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.history-era-amemiya::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.15));
+}
+
+.history-era-aobayama {
+  background: linear-gradient(135deg, #388E3C 0%, #43A047 100%) !important;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(67, 160, 71, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.history-era-aobayama::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2));
+}
+
+/* ============================================
+   寄付セクション
+   ============================================ */
+.reason-card-simple {
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-card-simple:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(46, 125, 50, 0.15) !important;
+  border-color: var(--light-green);
+}
+
+.donation-usage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.donation-usage-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.donation-usage-list li:last-child {
+  border-bottom: none;
+}
+
+.donation-usage-list li .material-icons {
+  color: var(--primary-green);
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.donation-amount-box {
+  border: 2px solid var(--light-green);
+}
+
+.donation-plan {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.05), rgba(102, 187, 106, 0.05));
+  border-radius: 10px;
+}
+
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.simple-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+}
+
+.simple-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   バッジの色分け統一
+   ============================================ */
+.notice-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-right: 0.5rem;
+  background-color: var(--primary-green);
+}
+
+.notice-badge.bg-info {
+  background-color: #0dcaf0 !important;
+}
+
+.notice-badge.bg-success {
+  background-color: var(--primary-green) !important;
+}
+
+.notice-badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.notice-badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.notice-badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+
+/* 学部長メッセージセクションのスタイル追加 */
+.dean-photo-wrapper {
+    max-width: 300px;
+    width: 100%;
+}
+
+.dean-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.message-content h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.message-text p {
+    text-align: justify;
+    color: #333;
+}
+
+.signature {
+    background: linear-gradient(to right, transparent, rgba(76, 175, 80, 0.05));
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 767px) {
+    .dean-photo-wrapper {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .message-content h3 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    
+    .message-content .fst-italic {
+        text-align: center;
+    }
+    
+    .signature {
+        text-align: center !important;
+    }
+}
+
+/* ============================================
+   レスポンシブ: モバイル専用スタイル
+   ============================================ */
+@media (max-width: 767px) {
+    /* ヒーローセクションの画像透明度調整（モバイルのみ） */
+    .jumbotron-fluid {
+        position: relative;
+    }
+    
+    .jumbotron-fluid::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    .jumbotron-fluid .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* ヒーロー画像自体の明度を上げる */
+    .jumbotron-fluid img {
+        filter: brightness(1.2) contrast(0.9);
+    }
+    
+    /* 学部長メッセージ - モバイル対応 */
+    .dean-photo-wrapper {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .message-content h3 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    
+    .message-content .fst-italic {
+        text-align: center;
+    }
+    
+    .signature {
+        text-align: center !important;
+    }
+}
+
+.signature-simple {
+    border-top: 2px solid var(--primary-green);
+    padding-top: 1rem;
+}
+
+/* モバイル対応 */
+@media (max-width: 767px) {
+    .signature-simple {
+        text-align: center !important;
+        border-top: 2px solid var(--primary-green);
+        margin-top: 2rem;
+    }
+}
+
+/* ============================================
+   情報配信登録カード（明るく目立つデザイン）
+   ============================================ */
+.info-subscribe-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1F8F4 100%);
+  border: 3px solid #4CAF50;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 
+    0 8px 24px rgba(76, 175, 80, 0.25),
+    0 0 0 1px rgba(76, 175, 80, 0.1) inset;
+  position: relative;
+  overflow: hidden;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+/* 背景の装飾パターン */
+.info-subscribe-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(102, 187, 106, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.info-subscribe-card::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* アイコン部分 */
+.subscribe-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 12px rgba(76, 175, 80, 0.35),
+    0 2px 4px rgba(76, 175, 80, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-icon-wrapper .material-icons {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+}
+
+/* タイトル */
+.subscribe-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1B5E20;
+  letter-spacing: 0.02em;
+}
+
+/* 説明文 */
+.subscribe-description {
+  font-size: 0.95rem;
+  color: #2E7D32;
+  line-height: 1.6;
+}
+
+/* ボタン */
+.btn-subscribe {
+  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  box-shadow: 
+    0 4px 12px rgba(67, 160, 71, 0.4),
+    0 2px 4px rgba(67, 160, 71, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-subscribe:hover {
+  background: linear-gradient(135deg, #2E7D32 0%, #43A047 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(46, 125, 50, 0.5),
+    0 4px 8px rgba(46, 125, 50, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-subscribe:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 8px rgba(46, 125, 50, 0.4);
+}
+
+/* 軽いパルスアニメーション */
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 8px 24px rgba(76, 175, 80, 0.25),
+      0 0 0 1px rgba(76, 175, 80, 0.1) inset;
+  }
+  50% {
+    box-shadow: 
+      0 8px 32px rgba(76, 175, 80, 0.35),
+      0 0 0 2px rgba(76, 175, 80, 0.15) inset;
+  }
+}
+
+/* ============================================
+   レスポンシブ対応
+   ============================================ */
+@media (max-width: 991px) {
+  .subscribe-title {
+    font-size: 1.1rem;
+  }
+  
+  .subscribe-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn-subscribe {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .info-subscribe-card {
+    padding: 1.5rem;
+  }
+  
+  .subscribe-title {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .subscribe-description {
+    font-size: 0.85rem;
+  }
+  
+  .btn-subscribe {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
