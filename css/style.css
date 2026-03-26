@@ -734,16 +734,16 @@ body {
 }
 
 /* ============================================
-   情報配信登録カード（イエロー系）
+   情報配信登録カード（オレンジ系）
    ============================================ */
 .info-subscribe-card {
-  background: linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%);
-  border: 3px solid #FFEB3B;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  border: 3px solid #FFA726;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 
-    0 8px 24px rgba(255, 235, 59, 0.4),
-    0 0 0 1px rgba(255, 235, 59, 0.2) inset;
+    0 8px 24px rgba(255, 167, 38, 0.3),
+    0 0 0 1px rgba(255, 167, 38, 0.15) inset;
   position: relative;
   overflow: hidden;
   animation: subtle-pulse 3s ease-in-out infinite;
@@ -757,7 +757,7 @@ body {
   right: -10%;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255, 238, 88, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 183, 77, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -769,7 +769,7 @@ body {
   left: -5%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(255, 235, 59, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 167, 38, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -781,47 +781,47 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #FDD835 0%, #FFEB3B 100%);
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
   border-radius: 16px;
   box-shadow: 
-    0 4px 12px rgba(253, 216, 53, 0.5),
-    0 2px 4px rgba(253, 216, 53, 0.4);
+    0 4px 12px rgba(255, 152, 0, 0.4),
+    0 2px 4px rgba(255, 152, 0, 0.3);
   position: relative;
   z-index: 1;
 }
 
 .subscribe-icon-wrapper .material-icons {
   font-size: 2.5rem;
-  color: #F57F17;
+  color: #FFFFFF;
 }
 
 /* タイトル */
 .subscribe-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #F57F17;
+  color: #E65100;
   letter-spacing: 0.02em;
 }
 
 /* 説明文 */
 .subscribe-description {
   font-size: 0.95rem;
-  color: #F9A825;
+  color: #F57C00;
   line-height: 1.6;
 }
 
 /* ボタン */
 .btn-subscribe {
-  background: linear-gradient(135deg, #FBC02D 0%, #FDD835 100%);
-  color: #F57F17;
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
+  color: #FFFFFF;
   border: none;
   font-weight: 700;
   font-size: 1rem;
   padding: 0.85rem 2rem;
   border-radius: 50px;
   box-shadow: 
-    0 4px 12px rgba(251, 192, 45, 0.5),
-    0 2px 4px rgba(251, 192, 45, 0.4);
+    0 4px 12px rgba(255, 152, 0, 0.4),
+    0 2px 4px rgba(255, 152, 0, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
@@ -833,31 +833,31 @@ body {
 }
 
 .btn-subscribe:hover {
-  background: linear-gradient(135deg, #F9A825 0%, #FBC02D 100%);
+  background: linear-gradient(135deg, #F57C00 0%, #FF9800 100%);
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 20px rgba(249, 168, 37, 0.6),
-    0 4px 8px rgba(249, 168, 37, 0.45);
-  color: #F57F17;
+    0 6px 20px rgba(245, 124, 0, 0.5),
+    0 4px 8px rgba(245, 124, 0, 0.35);
+  color: #FFFFFF;
 }
 
 .btn-subscribe:active {
   transform: translateY(0);
   box-shadow: 
-    0 2px 8px rgba(249, 168, 37, 0.4);
+    0 2px 8px rgba(245, 124, 0, 0.4);
 }
 
 /* 軽いパルスアニメーション */
 @keyframes subtle-pulse {
   0%, 100% {
     box-shadow: 
-      0 8px 24px rgba(255, 235, 59, 0.4),
-      0 0 0 1px rgba(255, 235, 59, 0.2) inset;
+      0 8px 24px rgba(255, 167, 38, 0.3),
+      0 0 0 1px rgba(255, 167, 38, 0.15) inset;
   }
   50% {
     box-shadow: 
-      0 8px 32px rgba(255, 235, 59, 0.5),
-      0 0 0 2px rgba(255, 235, 59, 0.25) inset;
+      0 8px 32px rgba(255, 167, 38, 0.4),
+      0 0 0 2px rgba(255, 167, 38, 0.2) inset;
   }
 }
 
