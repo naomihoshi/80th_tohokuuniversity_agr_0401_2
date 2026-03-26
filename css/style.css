@@ -734,22 +734,21 @@ body {
 }
 
 /* ============================================
-   情報配信登録カード（明るく目立つデザイン）
+   情報配信登録カード（オレンジ系）
    ============================================ */
 .info-subscribe-card {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F1F8F4 100%);
-  border: 3px solid #4CAF50;
+  background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+  border: 3px solid #FFA726;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 
-    0 8px 24px rgba(76, 175, 80, 0.25),
-    0 0 0 1px rgba(76, 175, 80, 0.1) inset;
+    0 8px 24px rgba(255, 167, 38, 0.3),
+    0 0 0 1px rgba(255, 167, 38, 0.15) inset;
   position: relative;
   overflow: hidden;
   animation: subtle-pulse 3s ease-in-out infinite;
 }
 
-/* 背景の装飾パターン */
 .info-subscribe-card::before {
   content: '';
   position: absolute;
@@ -757,7 +756,7 @@ body {
   right: -10%;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(102, 187, 106, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 183, 77, 0.2) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -769,23 +768,22 @@ body {
   left: -5%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 167, 38, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
-/* アイコン部分 */
 .subscribe-icon-wrapper {
   width: 70px;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
   border-radius: 16px;
   box-shadow: 
-    0 4px 12px rgba(76, 175, 80, 0.35),
-    0 2px 4px rgba(76, 175, 80, 0.25);
+    0 4px 12px rgba(255, 152, 0, 0.4),
+    0 2px 4px rgba(255, 152, 0, 0.3);
   position: relative;
   z-index: 1;
 }
@@ -795,24 +793,21 @@ body {
   color: #FFFFFF;
 }
 
-/* タイトル */
 .subscribe-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1B5E20;
+  color: #E65100;
   letter-spacing: 0.02em;
 }
 
-/* 説明文 */
 .subscribe-description {
   font-size: 0.95rem;
-  color: #2E7D32;
+  color: #F57C00;
   line-height: 1.6;
 }
 
-/* ボタン */
 .btn-subscribe {
-  background: linear-gradient(135deg, #43A047 0%, #66BB6A 100%);
+  background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
   color: #FFFFFF;
   border: none;
   font-weight: 700;
@@ -820,8 +815,8 @@ body {
   padding: 0.85rem 2rem;
   border-radius: 50px;
   box-shadow: 
-    0 4px 12px rgba(67, 160, 71, 0.4),
-    0 2px 4px rgba(67, 160, 71, 0.3);
+    0 4px 12px rgba(255, 152, 0, 0.4),
+    0 2px 4px rgba(255, 152, 0, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
@@ -833,69 +828,23 @@ body {
 }
 
 .btn-subscribe:hover {
-  background: linear-gradient(135deg, #2E7D32 0%, #43A047 100%);
+  background: linear-gradient(135deg, #F57C00 0%, #FF9800 100%);
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 20px rgba(46, 125, 50, 0.5),
-    0 4px 8px rgba(46, 125, 50, 0.35);
+    0 6px 20px rgba(245, 124, 0, 0.5),
+    0 4px 8px rgba(245, 124, 0, 0.35);
   color: #FFFFFF;
 }
 
-.btn-subscribe:active {
-  transform: translateY(0);
-  box-shadow: 
-    0 2px 8px rgba(46, 125, 50, 0.4);
-}
-
-/* 軽いパルスアニメーション */
 @keyframes subtle-pulse {
   0%, 100% {
     box-shadow: 
-      0 8px 24px rgba(76, 175, 80, 0.25),
-      0 0 0 1px rgba(76, 175, 80, 0.1) inset;
+      0 8px 24px rgba(255, 167, 38, 0.3),
+      0 0 0 1px rgba(255, 167, 38, 0.15) inset;
   }
   50% {
     box-shadow: 
-      0 8px 32px rgba(76, 175, 80, 0.35),
-      0 0 0 2px rgba(76, 175, 80, 0.15) inset;
-  }
-}
-
-/* ============================================
-   レスポンシブ対応
-   ============================================ */
-@media (max-width: 991px) {
-  .subscribe-title {
-    font-size: 1.1rem;
-  }
-  
-  .subscribe-description {
-    font-size: 0.9rem;
-  }
-  
-  .btn-subscribe {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 767px) {
-  .info-subscribe-card {
-    padding: 1.5rem;
-  }
-  
-  .subscribe-title {
-    font-size: 1rem;
-    text-align: left;
-  }
-  
-  .subscribe-description {
-    font-size: 0.85rem;
-  }
-  
-  .btn-subscribe {
-    font-size: 0.95rem;
-    padding: 0.75rem 1.5rem;
+      0 8px 32px rgba(255, 167, 38, 0.4),
+      0 0 0 2px rgba(255, 167, 38, 0.2) inset;
   }
 }
