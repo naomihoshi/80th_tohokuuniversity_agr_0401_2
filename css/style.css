@@ -749,6 +749,7 @@ body {
   animation: subtle-pulse 3s ease-in-out infinite;
 }
 
+/* 背景の装飾パターン */
 .info-subscribe-card::before {
   content: '';
   position: absolute;
@@ -773,6 +774,7 @@ body {
   pointer-events: none;
 }
 
+/* アイコン部分 */
 .subscribe-icon-wrapper {
   width: 70px;
   height: 70px;
@@ -793,6 +795,7 @@ body {
   color: #FFFFFF;
 }
 
+/* タイトル */
 .subscribe-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -800,12 +803,14 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* 説明文 */
 .subscribe-description {
   font-size: 0.95rem;
   color: #F57C00;
   line-height: 1.6;
 }
 
+/* ボタン */
 .btn-subscribe {
   background: linear-gradient(135deg, #FF9800 0%, #FFB74D 100%);
   color: #FFFFFF;
@@ -836,6 +841,13 @@ body {
   color: #FFFFFF;
 }
 
+.btn-subscribe:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 8px rgba(245, 124, 0, 0.4);
+}
+
+/* 軽いパルスアニメーション */
 @keyframes subtle-pulse {
   0%, 100% {
     box-shadow: 
@@ -846,5 +858,44 @@ body {
     box-shadow: 
       0 8px 32px rgba(255, 167, 38, 0.4),
       0 0 0 2px rgba(255, 167, 38, 0.2) inset;
+  }
+}
+
+/* ============================================
+   レスポンシブ対応
+   ============================================ */
+@media (max-width: 991px) {
+  .subscribe-title {
+    font-size: 1.1rem;
+  }
+  
+  .subscribe-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn-subscribe {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .info-subscribe-card {
+    padding: 1.5rem;
+  }
+  
+  .subscribe-title {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .subscribe-description {
+    font-size: 0.85rem;
+  }
+  
+  .btn-subscribe {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
   }
 }
